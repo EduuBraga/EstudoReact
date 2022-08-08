@@ -1,0 +1,10 @@
+body{
+    background-color:rgb(196, 164, 225);
+}
+.container-article{
+    max-width: 500px;
+    padding: 5px;
+    background-color: blanchedalmond;
+    margin: auto;
+    box-shadow: black 0px 0px 10px 1px;
+}
