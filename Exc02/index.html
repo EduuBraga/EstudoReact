@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>Exercício 02</title>
+</head>
+
+<body>
+
+    <section id="root"></section>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        const root = document.querySelector("#root")
+
+        const card = ()=>{
+            return <div class="container-article">
+                <h1 id="Titulo principal">Título</h1>
+                <h4 id="Subtítulo">Subtítulo</h4>
+            </div>
+        }
+
+        ReactDOM.render(card(), root)
+
+    </script>
+</body>
+
+</html>
