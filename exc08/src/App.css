@@ -1,0 +1,22 @@
+body{
+  background-color: rgb(185, 143, 224);
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  color: gray ;
+}
+.header h1{
+  color: white;
+  margin-left: 10px;
+}
+
+.header nav a{
+  padding: 8px;
+  cursor: pointer;
+}
+.header nav a:hover{
+  color: white;
+}
