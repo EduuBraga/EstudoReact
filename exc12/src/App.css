@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+}
+.card__contador{
+    margin: 10px auto;
+    max-width: 400px;
+    text-align: center;
+    background-color: beige;
+    padding: 10px;
+    border: 2px solid black;
+}
+.card__contador h1{
+    padding: 10px;
+}
+.card__contador button{
+    background-color: aquamarine;
+    padding: 5px;
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+}
