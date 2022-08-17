@@ -1,0 +1,54 @@
+.container {
+    background: rgb(164, 123, 203);
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.formulario {
+    margin: 0 auto;
+    display: grid;
+    grid: auto / 1fr auto;
+    gap: 10px;
+    width: 60%;
+}
+
+.formulario input {
+    padding: 5px 10px 5px 10px;
+    background-color: beige;
+}
+
+.formulario button {
+    padding: 5px 10px 5px 10px;
+    background-color: beige;
+    transition: background 0.3s;
+}
+.formulario button:hover{
+    background-color: rgb(198, 198, 149);
+}
+
+.card__lista {
+    margin: 0 auto;
+    width: 60%;
+}
+.card__lista h3{
+    text-align: center;
+}
+
+.lista {
+    padding: 0px;
+    list-style: none;
+}
+
+.lista li {
+    margin: 5px 0px 5px 0px;
+    background-color: beige;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid black;
+    border-radius: px;
+}

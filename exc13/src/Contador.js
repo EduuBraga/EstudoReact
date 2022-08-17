@@ -19,7 +19,7 @@ export default function Contador() {
 
     useEffect(
         () => {
-            return () => console.log('O componente foi apagado')
+            return () => console.log('Não existe mais componente')
         }, []
     )
 
