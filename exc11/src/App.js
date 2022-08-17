@@ -4,7 +4,7 @@ import Contador from './Contador.js'
 function App() {
   return (
     <div>
-      <Contador numero={1}></Contador>
+      <Contador ></Contador>
     </div>
   );
 }
