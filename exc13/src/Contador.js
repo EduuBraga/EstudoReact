@@ -11,10 +11,8 @@ export default function Contador() {
     }, [])
 
     useEffect(() => {
-        setTimeout(() => {
-            document.title = numero
-            localStorage.setItem("numero", numero)
-        }, 1)
+        document.title = numero
+        localStorage.setItem("numero", numero)
     }, [numero])
 
     useEffect(
