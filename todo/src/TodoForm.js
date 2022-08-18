@@ -1,25 +1,24 @@
 import React, {useState} from "react";
 
 export default function TodoForm(props){
-    const [tarefa, porTarefa] = useState('')
+    const [texto, porTexto] = useState('')
 
     function lidarMudanca(event) {
         let texto = event.target.value
-        porTarefa(texto)
+        porTexto(texto)
     }
 
     function novaTarefa(event) {
         event.preventDefault()
-        if (tarefa) {
-            props.AdicionarItem(tarefa)
-            // porItems([...items, tarefa])
-            porTarefa('')
+        if (texto) {
+            props.AdicionarItem(texto)
+            porTexto('')
         }
     }
 
     return (
         <form className="formulario">
-            <input type="text" onChange={lidarMudanca} value={tarefa} placeholder='Adicionar nova tarefa'></input>
+            <input type="text" onChange={lidarMudanca} value={texto} placeholder='Adicionar nova tarefa'></input>
             <button onClick={novaTarefa}>+</button>
         </form>
     )
