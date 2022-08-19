@@ -51,15 +51,22 @@
     padding: 5px 10px 5px 10px;
     border: 1px solid black;
     border-radius: px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template: auto / auto 1fr auto;
+    gap: 10px;
     align-items: center;
-}
-.lista li p{
-    padding: 0px;
 }
 
 .lixeira{
     width: 25px;
     height: 25px;
+}
+
+.check{
+    width: 25px;
+    height: 25px;
+}
+
+.finalizada{
+    text-decoration: line-through;
 }

@@ -19,12 +19,25 @@ export default function Todo() {
         porItems(filtrandoItems)
     }
 
+    function finalizarTarefa(itemClicado) {
+        let itensFinalizados = items.map(item => {
+            if (item.id === itemClicado.id) {
+                item.finalizada = !item.finalizada
+            }
+
+            return item
+        })
+
+        porItems(itensFinalizados)
+
+    }
+
     return (
         <div className="container">
             <h1>to-do List</h1>
 
             <TodoForm AdicionarItem={AdicionarItem}></TodoForm>
-            <Lista deletarTarefa={deletarTarefa} items={items} ></Lista>
+            <Lista finalizarTarefa={finalizarTarefa} deletarTarefa={deletarTarefa} items={items} ></Lista>
 
         </div>
     )
