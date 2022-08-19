@@ -14,14 +14,18 @@ export default function Todo() {
         porItems([...items, tarefa])
     }
 
-    return (
-        <section className="container">
-            <h1>to-do List</h1>
-            <TodoForm AdicionarItem={AdicionarItem}></TodoForm>
+    function deletarTarefa(id) {
+        let filtrandoItems = items.filter((item) => item.id !== id)
+        porItems(filtrandoItems)
+    }
 
-            <div className="card__lista">
-                <Lista items={items} ></Lista>
-            </div>
-        </section>
+    return (
+        <div className="container">
+            <h1>to-do List</h1>
+
+            <TodoForm AdicionarItem={AdicionarItem}></TodoForm>
+            <Lista deletarTarefa={deletarTarefa} items={items} ></Lista>
+
+        </div>
     )
 }
