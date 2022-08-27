@@ -1,17 +1,15 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react'
+import { Header } from './components/Header'
+import { Contador } from './components/Contador'
+import { ContagemProvider } from './provider/ContagemContexto'
 
-function App() {
-
-  const [contagem, setContagem] = useState(0)
-
-  return (
-   <div>
-    <div>{contagem}</div>
-    <button onClick={()=>{setContagem(contagem + 1)}}>+</button>
-    <button onClick={()=>{setContagem(contagem - 1)}}>-</button>
-   </div>
+export function App(){
+  return(
+    <div>
+      <ContagemProvider>
+        <Header></Header>
+        <Contador></Contador>
+      </ContagemProvider>
+    </div>
   )
 }
-
-export default App
