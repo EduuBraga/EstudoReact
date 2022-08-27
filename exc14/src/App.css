@@ -1,0 +1,19 @@
+body{
+  margin: 0 ;
+}
+
+#root{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root div{
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.731);
+}
+
+.header{
+  display: flex;
+  align-items: center;
+}
