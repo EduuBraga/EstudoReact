@@ -1,30 +1,25 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import axios from "axios"
+import { useForm } from "react-hook-form"
 
 export default function App() {
-  const [nome, setNome] = useState('')
-  const [sobrenome, setSobrenome] = useState('')
+  const {register, handleSubmit} = useForm();
 
-  function onSubmit(e){
-    e.preventDefault()
-    let data ={
-      nome,
-      sobrenome
-    }
-    console.log(data)
+  function onSubmit(json){
+    console.log(json)
   }
   
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <label>
           Nome:
-          <input value={nome} onChange={(e)=>{setNome(e.target.value)}}></input>
+          <input type="text" {...register("nome")}></input>
         </label>
         <label>
           Sobrenome:
-          <input value={sobrenome} onChange={(e)=>{setSobrenome(e.target.value)}}></input>
+          <input type="text" {...register("sobrenome")}></input>
         </label>
         <button>Enviar</button>
       </form>
