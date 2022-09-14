@@ -2,7 +2,6 @@ import { Aulas } from './components/Aulas'
 import { Header } from './components/Header'
 import { Home } from './components/Home'
 import { Sobre } from './components/Sobre'
-import { data } from './components/Data'
 import { Aula } from './components/Aula'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'

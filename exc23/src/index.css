@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  background-color: rgb(168, 167, 167);
+}
+.nav__header a{
+  margin-left: 10px;
+}
+
+.home{
+  text-align: center;
+}
+
+.aulas{
+  text-align: center;
+}
+
+.sobre{
+  text-align: center;
+}
+
+.lista__aulas{
+  padding: 0px;
+  list-style-type: none;
+}
+
+.item__aulas{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+a, a:active{
+  color: black;
+}
+
+a:focus, a:hover{
+  color: rgb(72, 72, 72);
+}
