@@ -3,6 +3,7 @@ import { Header } from './components/Header'
 import { Home } from './components/Home'
 import { Sobre } from './components/Sobre'
 import { data } from './components/Data'
+import { Aula } from './components/Aula'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
@@ -15,7 +16,7 @@ export function App() {
           <Route path='*' element={<h1>Página não encontrada, tente novamente</h1>} />
           <Route path='/' element={<Home />} />
           <Route path='/aulas' element={<Aulas />} />
-          <Route path='/aulas/1' element={<><h1>{data[0].tittle}</h1> <p>{data[0].description}</p></>} />
+          <Route path='/aulas/:id' element={<Aula />} />
           <Route path='/sobre' element={<Sobre />} />
         </Routes>
       </div>
