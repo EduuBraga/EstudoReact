@@ -1,19 +1,17 @@
 import { data } from "./Data";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+
+function useAula(){
+  const id = useParams().id
+  return data.filter(aula=>aula.id == id)[0]
+}
 
 export function Aula(){
-  const params = useParams()
-  const [aula, setAula] = useState({})
-
-  useEffect(()=>{
-    setAula(data.filter(aula=>aula.id == params.id)[0])
-    console.log(aula)
-  })
+  const aula = useAula()
 
   return(
     <div>
-      <h1>{aula.tittle}</h1> 
+      <h1>{aula.tittle} - Aula {aula.id}</h1> 
       <p>{aula.description}</p>
     </div>
   )
