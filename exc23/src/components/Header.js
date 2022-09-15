@@ -1,15 +1,26 @@
-import { Link } from "react-router-dom"
+import { useEffect } from "react"
+import { useSelector } from "react-redux"
+import { Link, useNavigate } from "react-router-dom"
 import { Auth } from "./Auth"
 
 export function Header(){
+  const login = useSelector(state=>state)
+  const navigate = useNavigate()
+
+  useEffect(()=>{
+    if(login){
+      navigate('/')
+    }
+  }, [login])
+
   return(
     <header className="header">
       <div>Cold Dev</div>
       <nav className="nav__header">
-        <Auth></Auth>
         <Link to="/">Home</Link>
         <Link to="/sobre">Sobre</Link>
         <Link to="/aulas">Aulas</Link>
+        <Auth></Auth>
       </nav>
     </header>
   )

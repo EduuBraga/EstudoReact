@@ -11,11 +11,10 @@ export function Auth() {
   })
 
   return (login ?
-    <button
-      onClick={() => { dispatch( logoutAction()) }}>
+    <button className="button__auth" onClick={() => { dispatch( logoutAction()) }}>
       Logout
     </button> :
-    <button onClick={() => { dispatch( loginAction()) }}>
+    <button className="button__auth" onClick={() => { dispatch( loginAction()) }}>
       Login
     </button>
   )
