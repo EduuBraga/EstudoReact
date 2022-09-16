@@ -1,14 +1,9 @@
-import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { logoutAction, loginAction } from "../store/store"
+import { logoutAction, loginAction } from "../store"
 
-export function Auth() {
+export function AuthButton() {
   const login = useSelector(state => state)
   const dispatch = useDispatch()
-
-  useEffect(()=>{
-    console.log(login);
-  })
 
   return (login ?
     <button className="button__auth" onClick={() => { dispatch( logoutAction()) }}>

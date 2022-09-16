@@ -1,5 +1,6 @@
 import { data } from "./Data";
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function useAula(){
   const id = useParams().id

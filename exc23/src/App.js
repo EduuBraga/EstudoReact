@@ -4,11 +4,15 @@ import { Home } from './components/Home'
 import { Sobre } from './components/Sobre'
 import { Aula } from './components/Aula'
 import { PrivateRoute } from './components/PrivateRoute'
-import {Negado} from './components/Negado'
+import { Negado } from './components/Negado'
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from 'react-router-dom'
 
-import { LoginReducer } from './store/store'
+import { LoginReducer } from './store'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
@@ -25,7 +29,7 @@ export function App() {
             <Route path='/' element={<Home />} />
             <Route path='/aulas' element={<PrivateRoute redirectTo='/negado'> <Aulas /> </PrivateRoute>} />
             <Route path='/negado' element={<Negado />} />
-            <Route path='/aulas/:id' element={<Aula />} />
+            <Route path='/aulas/:id' element={<PrivateRoute redirectTo="/negado" ><Aula /></PrivateRoute>} />
             <Route path='/sobre' element={<Sobre />} />
           </Routes>
         </div>

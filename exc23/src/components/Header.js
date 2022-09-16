@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useSelector } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
-import { Auth } from "./Auth"
+import { AuthButton } from "./Auth"
 
 export function Header(){
   const login = useSelector(state=>state)
@@ -20,7 +20,7 @@ export function Header(){
         <Link to="/">Home</Link>
         <Link to="/sobre">Sobre</Link>
         <Link to="/aulas">Aulas</Link>
-        <Auth></Auth>
+        <AuthButton></AuthButton>
       </nav>
     </header>
   )
