@@ -1,18 +1,7 @@
-import { useEffect, useState } from "react"
-import { Form, Button } from "./style"
+import { Form } from "./style"
+import { ButtonTheme } from "../ButtonTheme"
 
 export function FormHome(props) {
-  const [hora, setHora] = useState("00:00")
-
-  useEffect(() => {
-    setInterval(() => {
-      setHora(new Date().toLocaleString("pt-br", {
-        hour: "2-digit",
-        minute: "2-digit"
-      }))
-    }, 1000)
-  })
-
   function executarAnotacao(e) {
     e.preventDefault()
     if (props.estudanteNome) {
@@ -30,10 +19,12 @@ export function FormHome(props) {
   }
 
   return (
-    <Form>
-      <input placeholder="Anote aqui" type="text" name="nome" onChange={e => props.setEstudanteNome(e.target.value)} value={props.estudanteNome} />
-      <Button isOn={props.estudanteNome} onClick={executarAnotacao}>Anotar</Button>
-      <span>{hora}</span>
+    <Form isOn={props.estudanteNome}>
+      <div>
+        <input placeholder="Anote aqui" type="text" name="nome" onChange={e => props.setEstudanteNome(e.target.value)} value={props.estudanteNome} />
+        <button  onClick={executarAnotacao}>Anotar</button>
+      </div>
+      <ButtonTheme handleTheme={props.handleTheme} ></ButtonTheme>
     </Form>
   )
 }
